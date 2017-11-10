@@ -22,9 +22,9 @@ grad = zeros(size(theta));
 
 
 
-
-
-
+Hx = sigmoid(X * theta);
+J = -(y' * log(Hx) + (1-y)' * log(1-Hx)) / m;
+grad = (((Hx - y)' * X) / m)'
 
 
 % =============================================================
